@@ -1,13 +1,96 @@
-.form-field {
-    display: flex;
-    gap: 10px;
+:root { --font-title: Verdana, Geneva, sans-serif; --font-body: Tahoma, Geneva, sans-serif; --header-h: 76px; --blue: #087fc4; --navy: #073653; --ink: #102b43; --muted: #536678; --line: #e5ebef; --pale: #f5f8fa; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+body { margin: 0; background: #edf2f5; color: var(--ink); font-family: var(--font-body); font-size: 14px; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4, .brand-name { font-family: var(--font-title); }
+button, input, textarea, select { font-family: inherit; }
+.container { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+.header { position: sticky; top: 0; z-index: 1000; background: #fff; border-bottom: 1px solid #e5edf1; box-shadow: 0 2px 10px rgba(18,55,78,.06); }
+.header-container { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: flex; align-items: center; }
+.brand img { display: block; width: 178px; max-height: 56px; object-fit: contain; object-position: left center; }
+.nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 42px); font-size: 13px; font-weight: 600; }
+.nav a { transition: color .2s; }
+.nav a:hover, .section-heading > a { color: var(--blue); }
+.nav-cta { padding: 10px 17px; border-radius: 7px; background: var(--blue); color: white; }
+.nav .nav-cta:hover { color: white; background: #056da9; }
+.hero { background: white; }
+.hero-grid { min-height: 390px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: relative; padding-top: 34px; padding-bottom: 34px; }
+.hero-visual { position: absolute; inset: 0; overflow: hidden; background: linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.88) 38%, rgba(255,255,255,.08) 100%), linear-gradient(145deg,#dcecf5,#a8cde0 52%,#6c9eb6); }
+/* Reemplaza hero-edificio.jpg por una foto panorámica del hospital para acercarte a la referencia. */
+.hospital-visual { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 48%; }
+/* Sombreado claro sobre la imagen, del lado del texto, para que se lea bien */
+.hero-visual::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.86) 32%, rgba(255,255,255,.5) 52%, rgba(255,255,255,0) 75%); }
+.hero-copy { position: relative; z-index: 1; grid-column: 1; max-width: 520px; padding: 22px 0; }
+.hero h1 { margin: 0 0 14px; max-width: 520px; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; letter-spacing: -1px; }
+.hero-description { max-width: 440px; margin: 0; color: #31495b; line-height: 1.6; }
+.hero-actions { margin-top: 23px; }
+.primary-action { display: inline-block; padding: 13px 20px; border-radius: 7px; background: var(--blue); color: white; font-weight: 700; box-shadow: 0 5px 14px #087fc433; }
+.values-line { position: relative; z-index: 1; grid-column: 1 / -1; align-self: end; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 30px; }
+.standard-card { padding: 21px 16px; text-align: center; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.94); box-shadow: 0 4px 15px rgba(18,55,78,.04); }
+.standard-card h3 { margin: 9px 0 4px; font-size: 15px; }
+.standard-card p { margin: 0; color: var(--muted); line-height: 1.45; }
+.news, .services { padding: 35px 0 18px; background: #fff; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.section-heading h2 { margin: 0; font-size: 24px; letter-spacing: -.3px; }
+.section-heading > a { font-weight: 700; }
+.news-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.lil-container { padding: 10px 10px 8px; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 4px 13px rgba(18,55,78,.05); display: flex; flex-direction: column; }
+.lil-container > img { display: block; width: 100%; height: 165px; object-fit: cover; border-radius: 8px; }
+.lil-container > span { display: block; margin: 14px 6px 6px; color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: .3px; }
+.lil-container h3 { margin: 0 6px 8px; font-size: 15px; line-height: 1.35; }
+.lil-container p { margin: 0 6px 14px; color: var(--muted); line-height: 1.5; }
+.card-meta { margin: auto 6px 6px; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 12px; }
+.card-meta a { color: var(--blue); font-size: 17px; font-weight: 700; }
+.services { padding-top: 28px; padding-bottom: 42px; }
+.services-line { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.services-line .standard-card { padding: 26px 18px; }
+.services-line img { width: 44px; height: 44px; object-fit: contain; }
+.footer { background: #063653; color: white; padding: 36px 0 0; }
+.footer-grid { width: min(1160px, calc(100% - 48px)); margin: auto; display: grid; grid-template-columns: 2fr .9fr 1.3fr .8fr; gap: 30px; }
+.hosp-data img { width: 185px; max-height: 60px; object-fit: contain; object-position: left center; }
+.hosp-data p { max-width: 390px; color: #d2e0e8; line-height: 1.6; }
+.navegation, .servic { display: grid; align-content: start; gap: 8px; }
+.navegation p, .servic p { margin: 0; color: #d2e0e8; font-size: 13px; }
+.navegation a, .servic a { color: #d2e0e8; font-size: 13px; }
+.footer strong { display: block; margin-bottom: 4px; font-size: 13px; }
+.social-media { display: grid; align-content: start; gap: 12px; }
+.social-media > div { display: flex; gap: 10px; }
+.social-media img { width: 25px; height: 25px; object-fit: contain; }
+.footer-foot { width: min(1160px, calc(100% - 48px)); margin: 28px auto 0; padding: 14px 0 16px; border-top: 1px solid #ffffff35; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #c4d4de; font-size: 11px; }
+.footer-foot p { margin: 0; }
+.legal { display: flex; }
+.legal a { padding: 0 12px; }
+.legal a + a { border-left: 1px solid #ffffff55; padding-right: 0; }
+@media (max-width: 760px) {
+ .container, .footer-grid { width: min(100% - 32px, 560px); }
+ .header-container { min-height: auto; padding-top: 14px; padding-bottom: 14px; align-items: flex-start; flex-direction: column; gap: 12px; }
+ .brand img { width: 155px; }
+ .nav { width: 100%; overflow-x: auto; gap: 21px; padding-bottom: 3px; font-size: 12px; }
+ .nav-cta { padding: 8px 12px; }
+ .hero-grid { min-height: 0; grid-template-columns: 1fr; padding-top: 44px; padding-bottom: 24px; }
+ .hero-visual { background: linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.73)),linear-gradient(145deg,#dcecf5,#6c9eb6); }
+ .hero-copy { grid-column: 1; }
+ .hero h1 { font-size: clamp(34px, 10vw, 48px); }
+ .values-line { grid-template-columns: repeat(2,1fr); gap: 9px; margin-top: 24px; }
+ .standard-card { padding: 16px 9px; }
+ .standard-card h3 { font-size: 14px; }
+ .news, .services { padding-top: 28px; }
+ .section-heading h2 { font-size: 22px; }
+ .news-grid { grid-template-columns: 1fr; }
+ .lil-container > img { height: 210px; }
+ .services-line { grid-template-columns: repeat(2,1fr); gap: 10px; }
+ .footer-grid { grid-template-columns: 1fr 1fr; gap: 23px; }
+ .hosp-data { grid-column: 1/-1; }
 }
-.cont-hijo {
-    flex: 1;
-    border: 1;
-    padding: 20px;
-    background-color:red ;
+@media (max-width: 390px) { .services-line { grid-template-columns: 1fr; } }
+
+@media (max-width: 760px) {
+ .footer-foot { width: min(100% - 32px, 560px); flex-direction: column; align-items: flex-start; }
+ .legal a:first-child { padding-left: 0; }
 }
-.cont-hijo label {
-    display: block;
+
+@media (max-width: 760px) {
+ .hero-visual::after { background: linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.8) 60%, rgba(255,255,255,.55) 100%); }
 }

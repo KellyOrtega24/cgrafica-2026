@@ -1,339 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-  <title>Formulario de contacto</title>
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SaludVida Hospital">
+    <title>SaludVida Hospital</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <main class="form-page">
-    <section class="form-section">
-      <div class="form-container">
-        <header class="form-header">
-          <span class="eyebrow">
-            CONTACTO
-          </span>
-          <h1>
-            Cuéntenos sobre su necesidad
-          </h1>
-          <p>
-            Complete el formulario. Los campos marcados con
-            <strong>*</strong> son obligatorios.
-          </p>
-        </header>
+    <header class="header">
+        <div class="container header-container">
+            <a class="brand" href="index.html">
+                <span class="brand-name">Salud<span>Vida</span></span>
+            </a>
 
-        <form
-          class="contact-form"
-          action="#"
-          method="post"
-        >
-          <!-- DATOS PERSONALES -->
-          <section class="form-block">
-            <h2>
-              Datos personales
-            </h2>
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="nombre">
-                  Nombre
-                  <span class="required-mark" aria-hidden="true">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  autocomplete="given-name"
-                  placeholder="Laura"
-                  required
-                >
-              </div>
-              <div class="form-field">
-                <label for="apellido">
-                  Apellido
-                  <span class="required-mark" aria-hidden="true">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="apellido"
-                  name="apellido"
-                  autocomplete="family-name"
-                  placeholder="Martínez"
-                  required
-                >
-              </div>
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#noticias">Noticias</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a class="nav-cta" href="#contacto">Contacto</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-visual">
+                    <img class="hospital-visual" src="img/imagenes/edificio-del-hospital.webp" alt="Edificio del hospital SaludVida">
+                </div>
+                <div class="hero-copy">
+                    <h1>Cuidamos lo más importante: tu salud</h1>
+                    <p class="hero-description">
+                        Atención médica integral con un equipo humano comprometido y tecnología de vanguardia
+                    </p>
+                    <div class="hero-actions">
+                        <a class="primary-action" href="#servicios">Conoce nuestros servicios</a>
+                    </div>
+                </div>
+                <div class="values-line.grid">
+                    <article class="standard-card">
+                        <h3>Atención integral</h3>
+                        <p>para toda la familia</p>
+                    </article>
+                    <article class="standard-card">
+                        <h3>Especialistas</h3>
+                        <p>altamente capacitados</p>
+                    </article>
+                    <article class="standard-card">
+                        <h3>Tecnología</h3>
+                        <p>médica avanzada</p>
+                    </article>
+                    <article class="standard-card">
+                        <h3>Compromiso</h3>
+                        <p>con la comunidad</p>
+                    </article>
+                </div>
             </div>
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="email">
-                  Correo
-                  <span class="required-mark" aria-hidden="true">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  autocomplete="email"
-                  placeholder="nombre@empresa.com"
-                  required
-                >
-              </div>
-              <div class="form-field">
-                <label for="telefono">
-                  Teléfono
-                </label>
-                <input
-                  type="tel"
-                  id="telefono"
-                  name="telefono"
-                  autocomplete="tel"
-                  placeholder="+57 300 000 0000"
-                >
-              </div>
+        </section>
+
+        <section class="news" id="noticias">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>Noticias destacadas</h2>
+                    <a href="#noticias">Ver todas →</a>
+                </header>
+                <div class="news-grid">
+                    <article class="lil-container">
+                        <img src="img/imagenes/camillas2.jpeg" alt="Unidad de Cuidados Intensivos" width="300">
+                        <span>INSTITUCIONAL</span>
+                        <h3>Inauguramos la nueva Unidad de Cuidados Intensivos</h3>
+                        <p>Ampliamos nuestra capacidad de atención con tecnología de última generación.</p>
+                        <div class="card-meta"><time>10 abr. 2026</time><a href="#noticias" aria-label="Leer más">→</a>
+                        </div>
+                    </article>
+                    <article class="lil-container">
+                        <img src="img/imagenes/doctoranino.jpeg" alt="Campaña de vacunación infantil" width="300">
+                        <span>SALUD</span>
+                        <h3>Campaña de vacunación infantil en nuestra ciudad</h3>
+                        <p>Jornadas gratuitas de vacunación para niños y niñas de 0 a 5 años.</p>
+                        <div class="card-meta"><time>8 abr. 2026</time><a href="#noticias" aria-label="Leer más">→</a>
+                        </div>
+                    </article>
+                    <article class="lil-container">
+                        <img src="img/imagenes/recreacion.jpeg" alt="Jornada de bienestar" width="300">
+                        <span>COMUNIDAD</span>
+                        <h3>Jornada de bienestar para nuestros colaboradores</h3>
+                        <p>Más de 200 empleados participaron en actividades de salud física y mental.</p>
+                        <div class="card-meta"><time>5 abr. 2026</time><a href="#noticias" aria-label="Leer más">→</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </section>
-
-          <!-- ORGANIZACIÓN -->
-          <section class="form-block">
-            <h2>
-              Organización
-            </h2>
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="empresa">
-                  Empresa
-                </label>
-                <input
-                  type="text"
-                  id="empresa"
-                  name="empresa"
-                  autocomplete="organization"
-                >
-              </div>
-              <div class="form-field">
-                <label for="empleados">
-                  Número de empleados
-                </label>
-                <input
-                  type="number"
-                  id="empleados"
-                  name="empleados"
-                  min="1"
-                  step="1"
-                >
-              </div>
+        </section>
+        <section class="services" id="servicios">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>Nuestros servicios</h2>
+                    <a href="#servicios">Ver todos →</a>
+                </header>
+                <div class="services-line">
+                    <article class="standard-card">
+                        <img src="img/iconos/estetoscopio.png" alt="">
+                        <h3>Consulta externa</h3>
+                        <p>Atención médica especializada para todas las edades.</p>
+                    </article>
+                    <article class="standard-card">
+                        <img src="img/iconos/latido-del-corazon.png" alt="">
+                        <h3>Urgencias</h3>
+                        <p>Atención 24/7 para situaciones críticas.</p>
+                    </article>
+                    <article class="standard-card">
+                        <img src="img/iconos/hospitalizacion.png" alt="">
+                        <h3>Hospitalización</h3>
+                        <p>Habitaciones seguras y confortables.</p>
+                    </article>
+                    <article class="standard-card">
+                        <img src="img/iconos/silueta-de-multiples-usuarios.png" alt="">
+                        <h3>Programas de salud</h3>
+                        <p>Prevención y bienestar para la comunidad.</p>
+                    </article>
+                </div>
             </div>
-            <div class="form-field">
-              <label for="servicio">
-                Servicio de interés
-                <span class="required-mark" aria-hidden="true">*</span>
-              </label>
-              <select
-                id="servicio"
-                name="servicio"
-                required
-              >
-                <option
-                  value=""
-                  selected
-                  disabled
-                >
-                  Seleccione un servicio
-                </option>
-                <optgroup label="Auditorías de Seguridad">
-                  <option value="pentesting">
-                    Pentesting
-                  </option>
-                  <option value="hacking-etico">
-                    Hacking Ético
-                  </option>
-                  <option value="iso27001">
-                    ISO 27001
-                  </option>
-                </optgroup>
-                <optgroup label="Desarrollo Seguro">
-                  <option value="ssdlc">
-                    SSDLC
-                  </option>
-                  <option value="devsecops">
-                    DevSecOps
-                  </option>
-                  <option value="ai-security">
-                    AI Security
-                  </option>
-                </optgroup>
-              </select>
+        </section>
+    </main>
+    <footer class="footer" id="footer-cont">
+        <div class="foot-top">
+            <div class="footer-grid">
+                <section class="hosp-data">
+                    <img src="img/logos/logo-saludvida-footer.png" alt="SaludVida Hospital">
+                    <p>Trabajamos cada día por una mejor calidad de vida, promoviendo la salud y el bienestar de nuestra
+                        comunidad.</p>
+                </section>
+                <section class="navegation">
+                    <strong>Navegación</strong>
+                    <p>Inicio</p>
+                    <p>Noticias</p>
+                    <p>Servicios</p>
+                    <p>Nosotros</p>
+                    <p>Contacto</p>
+                </section>
+                <section class="servic">
+                    <strong>Servicios</strong>
+                    <p>Consulta externa</p>
+                    <p>Urgencias</p>
+                    <p>Hospitalización</p>
+                    <p>Programas de salud</p>
+                </section>
+                <section class="social-media">
+                    <strong>Síganos</strong>
+                    <div>
+                        <img src="img/iconos/facebook.png" alt="Facebook">
+                        <img src="img/iconos/instagram.png" alt="Instagram">
+                        <img src="img/iconos/linkedin.png" alt="LinkedIn">
+                        <img src="img/iconos/juego.png" alt="YouTube">
+                    </div>
+                </section>
             </div>
-          </section>
-
-          <!-- DISPONIBILIDAD -->
-          <section class="form-block">
-            <h2>
-              Disponibilidad
-            </h2>
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="fecha">
-                  Fecha preferida
-                </label>
-                <input
-                  type="date"
-                  id="fecha"
-                  name="fecha"
-                >
-              </div>
-              <div class="form-field">
-                <label for="hora">
-                  Hora preferida
-                </label>
-                <input
-                  type="time"
-                  id="hora"
-                  name="hora"
-                >
-              </div>
-            </div>
-          </section>
-
-          <!-- MODALIDAD -->
-          <fieldset>
-            <legend>
-              Modalidad de contacto
-            </legend>
-            <div class="choice-list">
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="modalidad"
-                  value="correo"
-                  checked
-                >
-                <span>Correo electrónico</span>
-              </label>
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="modalidad"
-                  value="telefono"
-                >
-                <span>Teléfono</span>
-              </label>
-              <label class="choice">
-                <input
-                  type="radio"
-                  name="modalidad"
-                  value="videollamada"
-                >
-                <span>Videollamada</span>
-              </label>
-            </div>
-          </fieldset>
-
-          <!-- INTERESES -->
-          <fieldset>
-            <legend>
-              Temas adicionales de interés
-            </legend>
-            <div class="choice-list">
-              <label class="choice">
-                <input
-                  type="checkbox"
-                  name="intereses"
-                  value="seguridad"
-                >
-                <span>Seguridad de aplicaciones</span>
-              </label>
-              <label class="choice">
-                <input
-                  type="checkbox"
-                  name="intereses"
-                  value="cloud"
-                >
-                <span>Cloud Security</span>
-              </label>
-              <label class="choice">
-                <input
-                  type="checkbox"
-                  name="intereses"
-                  value="ia"
-                >
-                <span>AI Security</span>
-              </label>
-            </div>
-          </fieldset>
-
-          <!-- MENSAJE -->
-          <div class="form-field">
-            <label for="mensaje">
-              Describa su necesidad
-              <span class="required-mark" aria-hidden="true">*</span>
-            </label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="7"
-              maxlength="1200"
-              placeholder="Cuéntenos brevemente qué necesita..."
-              required
-            ></textarea>
-            <small class="field-help">
-              Máximo 1200 caracteres.
-            </small>
-          </div>
-
-          <!-- ARCHIVO -->
-          <div class="form-field">
-            <label for="archivo">
-              Documento de soporte
-            </label>
-            <input
-              type="file"
-              id="archivo"
-              name="archivo"
-              accept=".pdf,.doc,.docx,.xlsx"
-            >
-            <small class="field-help">
-              Formatos sugeridos: PDF, Word o Excel.
-            </small>
-          </div>
-
-          <!-- TÉRMINOS -->
-          <label class="choice">
-            <input
-              type="checkbox"
-              name="terminos"
-              required
-            >
-            <span>
-              Acepto el tratamiento de la información
-              suministrada.
-            </span>
-          </label>
-
-          <!-- BOTONES -->
-          <div class="form-actions">
-            <button
-              type="submit"
-              class="button button-primary"
-            >
-              Enviar solicitud
-            </button>
-            <button
-              type="reset"
-              class="button button-secondary"
-            >
-              Limpiar
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
+        </div>
+        <div class="footer-foot">
+            <p>© 2026 Hospital SaludVida. Todos los derechos reservados.</p>
+            <div class="legal"><a href="#">Política de privacidad</a><a href="#">Términos de uso</a></div>
+        </div>
+    </footer>
 </body>
+
 </html>
