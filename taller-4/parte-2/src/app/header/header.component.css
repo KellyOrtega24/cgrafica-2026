@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--soft);
+  border-bottom: 1px solid var(--border);
+}

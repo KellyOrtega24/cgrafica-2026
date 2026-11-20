@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.sidebar {
+  position: sticky;
+  top: 78px;
+  margin: 12px;
+  padding: 24px 20px;
+  background: var(--border);
+  border-radius: var(--radius);
+}
+
+nav {
+  display: grid;
+  gap: 16px;
+}
+
+a {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--primary);
+}

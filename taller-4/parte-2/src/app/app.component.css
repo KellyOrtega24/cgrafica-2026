@@ -1,0 +1,26 @@
+.contenedor {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  min-height: 100vh;
+  background: var(--primary-light);
+}
+
+app-header { grid-area: header; }
+app-sidebar { grid-area: sidebar; }
+app-content { grid-area: content; }
+app-footer { grid-area: footer; }
+
+@media (max-width: 800px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+  }
+}

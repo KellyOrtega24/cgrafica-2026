@@ -1,0 +1,10 @@
+.logo {
+  padding: 8px 18px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+}
