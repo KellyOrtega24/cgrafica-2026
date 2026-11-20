@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+:root {
+    --color-titulo: #ff4900;
+    --color-parrafo: #0093ff;
+    --color-parrafo-pequeno: #c500ff;
+    --color-enlace: #001bff;
+    --color-enlace-visitado: #4caf50;
+    --color-enlace-hover: #ff6600;
+    --color-tabla-encabezado: #000000;
+    --color-tabla-texto-encabezado: #ffffff;
+    --color-fila-clara: #bec1c3;
+    --color-fila-oscura: #045795;
+    --fuente-base: Arial, sans-serif;
+    --fuente-decorativa: 'Nerko One', cursive;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: var(--fuente-base);
+    background: #ffffff;
+    color: #000000;
+}
+
+h2 {
+    color: var(--color-titulo);
+    font-size: 2rem;
+}
+
+p {
+    font-family: var(--fuente-base);
+    font-size: 1rem;
+    color: var(--color-parrafo);
+}
+
+p.parrafo-pequeno {
+    font-family: var(--fuente-decorativa);
+    font-size: 12px;
+    color: var(--color-parrafo-pequeno);
+}
+
+a {
+    color: var(--color-enlace);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-enlace-visitado);
+}
+
+a:hover {
+    color: var(--color-enlace-hover);
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--color-tabla-encabezado);
+    color: var(--color-tabla-texto-encabezado);
+    font-size: 1.5rem;
+    padding: 8px;
+}
+
+td {
+    font-size: 1.5rem;
+    padding: 8px;
+}
+
+tbody tr:nth-child(odd) {
+    background: var(--color-fila-clara);
+    color: #000000;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--color-fila-oscura);
+    color: #ffffff;
+}
